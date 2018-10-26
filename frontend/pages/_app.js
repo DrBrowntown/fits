@@ -1,12 +1,14 @@
 import App, { Container } from "next/app";
+import { Component } from "react";
 
 class MyApp extends App {
   render() {
-    const { Compoenent } = this.props;
+    const { Component } = this.props;
 
     return (
       <Container>
         <p>Every page</p>
+        <Component />
       </Container>
     );
   }
