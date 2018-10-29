@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Header from "../components/Header";
 import Meta from "../components/Meta";
-import styled from "styled-components";
 
 class Page extends Component {
   render() {
