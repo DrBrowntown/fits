@@ -24,6 +24,12 @@ const Inner = styled.div`
   padding: 2rem;
 `;
 
+injectGlobal`
+  html {
+    
+  }
+`;
+
 class Page extends Component {
   render() {
     return (
