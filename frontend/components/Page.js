@@ -32,6 +32,10 @@ injectGlobal`
   *, *:before, *:after{
     box-sizing: inherit;
   }
+  body {
+    padding: 0;
+    margin: 0;
+  }
 `;
 
 class Page extends Component {
