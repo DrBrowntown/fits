@@ -9,9 +9,10 @@ const StyledPage = styled.div`
 `;
 
 const Inner = styled.div`
-  max-width: 100px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 2rem;
+  background: red;
 `;
 
 class Page extends Component {
