@@ -27,11 +27,13 @@ const Inner = styled.div`
 class Page extends Component {
   render() {
     return (
-      <StyledPage>
-        <Meta />
-        <Header />
-        <Inner>{this.props.children}</Inner>
-      </StyledPage>
+      <ThemeProvider theme={theme}>
+        <StyledPage>
+          <Meta />
+          <Header />
+          <Inner>{this.props.children}</Inner>
+        </StyledPage>
+      </ThemeProvider>
     );
   }
 }
