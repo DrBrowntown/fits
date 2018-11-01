@@ -8,6 +8,12 @@ const StyledPage = styled.div`
   color: black;
 `;
 
+const Inner = styled.div`
+  max-width: 100px;
+  margin: 0 auto;
+  padding: 2rem;
+`;
+
 class Page extends Component {
   render() {
     return (
