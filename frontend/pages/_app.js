@@ -19,4 +19,4 @@ class MyApp extends App {
   }
 }
 
-export default MyApp;
+export default withData(MyApp);
