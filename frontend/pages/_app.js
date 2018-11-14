@@ -9,9 +9,11 @@ class MyApp extends App {
 
     return (
       <Container>
-        <Page>
-          <Component />
-        </Page>
+        <ApolloProvider client={this.props.apollo}>
+          <Page>
+            <Component />
+          </Page>
+        </ApolloProvider>
       </Container>
     );
   }
