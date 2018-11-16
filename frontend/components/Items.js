@@ -20,6 +20,12 @@ class Items extends Component {
     return (
       <div>
         <p>Items!</p>
+        <Query query={ALL_ITEMS_QUERY}>
+          {({ data, error, loading }) => {
+            console.log(payload);
+            return <p>Hey I'm the child of query</p>;
+          }}
+        </Query>
       </div>
     );
   }
