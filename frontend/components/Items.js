@@ -3,7 +3,11 @@ import { Query } from "react-apollo";
 
 class Items extends Component {
   render() {
-    return <div />;
+    return (
+      <div>
+        <p>Items!</p>
+      </div>
+    );
   }
 }
 
