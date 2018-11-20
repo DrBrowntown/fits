@@ -6,11 +6,14 @@ import formatMoney from "../lib/formatMoney";
 
 class CreateItem extends Component {
   state = {
-    title: "",
+    title: "wot",
     description: "",
     image: "",
     largeImage: "",
     price: 0
+  };
+  handleChange = e => {
+    console.log(e);
   };
   render() {
     return (
@@ -25,6 +28,7 @@ class CreateItem extends Component {
               placeholder="Title"
               required
               value={this.state.title}
+              onChange={this.handleChange}
             />
           </label>
         </fieldset>
