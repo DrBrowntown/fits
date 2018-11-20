@@ -24,6 +24,7 @@ class CreateItem extends Component {
               name="title"
               placeholder="Title"
               required
+              value={this.state.title}
             />
           </label>
         </fieldset>
