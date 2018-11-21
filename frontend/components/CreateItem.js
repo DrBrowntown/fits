@@ -49,6 +49,7 @@ class CreateItem extends Component {
               console.log(this.state);
             }}
           >
+            <Error error={error} />
             <fieldset>
               <label htmlFor="title">
                 Title
