@@ -13,7 +13,7 @@ class CreateItem extends Component {
     price: 0
   };
   handleChange = e => {
-    console.log(e);
+    this.setState({ title: e.target.value });
   };
   render() {
     return (
