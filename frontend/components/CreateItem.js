@@ -4,13 +4,15 @@ import gql from "graphql-tag";
 import Form from "./styles/Form";
 import formatMoney from "../lib/formatMoney";
 
+const CREAT_ITEM_MUTATION = gql``;
+
 class CreateItem extends Component {
   state = {
-    title: "wot",
-    description: "",
-    image: "",
-    largeImage: "",
-    price: 0
+    title: "wot hat",
+    description: "wot is this hat?",
+    image: "hat.png",
+    largeImage: "big-hat.png",
+    price: 1000
   };
   handleChange = e => {
     const { name, type, value } = e.target;
@@ -19,7 +21,13 @@ class CreateItem extends Component {
   };
   render() {
     return (
-      <Form>
+      <Form
+        on
+        onSubmit={e => {
+          e.preventDefault();
+          console.log(this.state);
+        }}
+      >
         <fieldset>
           <label htmlFor="title">
             Title
@@ -64,3 +72,4 @@ class CreateItem extends Component {
 }
 
 export default CreateItem;
+export { CREAT_ITEM_MUTATION };
