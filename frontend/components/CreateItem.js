@@ -45,6 +45,18 @@ class CreateItem extends Component {
               onChange={this.handleChange}
             />
           </label>
+          <label htmlFor="description">
+            Description
+            <textarea
+              type="number"
+              id="description"
+              name="description"
+              placeholder="Description"
+              required
+              value={this.state.description}
+              onChange={this.handleChange}
+            />
+          </label>
         </fieldset>
       </Form>
     );
