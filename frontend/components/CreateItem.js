@@ -4,7 +4,23 @@ import gql from "graphql-tag";
 import Form from "./styles/Form";
 import formatMoney from "../lib/formatMoney";
 
-const CREAT_ITEM_MUTATION = gql``;
+const CREATE_ITEM_MUTATION = gql`
+    mutation CREATE_ITEM_MUTATION(
+        title: String!
+        description: String!
+        price: Int!
+        image: String
+        largeImage: String
+    ) {
+        createItem(
+            title
+            description
+            price
+            image
+            largeImage
+        )
+    }    
+`;
 
 class CreateItem extends Component {
   state = {
@@ -72,4 +88,4 @@ class CreateItem extends Component {
 }
 
 export default CreateItem;
-export { CREAT_ITEM_MUTATION };
+export { CREATE_ITEM_MUTATION };
