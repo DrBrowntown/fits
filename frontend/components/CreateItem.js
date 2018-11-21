@@ -44,9 +44,10 @@ class CreateItem extends Component {
         {(createItem, { loading, error }) => (
           <Form
             on
-            onSubmit={e => {
+            onSubmit={async e => {
               e.preventDefault();
-              console.log(this.state);
+              const res = await createItem();
+              console.log(res);
             }}
           >
             <Error error={error} />
