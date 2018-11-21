@@ -50,7 +50,7 @@ class CreateItem extends Component {
             }}
           >
             <Error error={error} />
-            <fieldset>
+            <fieldset disabled={loading} aria-busy={loading}>
               <label htmlFor="title">
                 Title
                 <input
