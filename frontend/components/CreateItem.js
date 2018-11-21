@@ -48,10 +48,9 @@ class CreateItem extends Component {
           <label htmlFor="description">
             Description
             <textarea
-              type="number"
               id="description"
               name="description"
-              placeholder="Description"
+              placeholder="Enter a description"
               required
               value={this.state.description}
               onChange={this.handleChange}
