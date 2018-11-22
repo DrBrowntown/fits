@@ -46,7 +46,7 @@ class CreateItem extends Component {
           <Form
             on
             onSubmit={async e => {
-              // Stop form from submitting
+              // stop form from submitting
               e.preventDefault();
               // call the mutation
               const res = await createItem();
