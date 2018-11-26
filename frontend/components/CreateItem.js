@@ -40,12 +40,16 @@ class CreateItem extends Component {
     this.setState({ [name]: val });
   };
 
-  uploadFile = e => {
+  async uploadFile = e => {
     console.log("uploading file");
     const files = e.target.files;
     const data = new FormData();
     data.append("file", files[0]);
     data.append("upload_presets", "sickfits");
+    const res = await fetch('https://api.cloudinary.com/v1_1/drbrowntown/image/upload', {
+      method: 'POST',
+      body: data
+    });
   };
   render() {
     return (
