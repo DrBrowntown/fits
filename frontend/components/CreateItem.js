@@ -42,6 +42,10 @@ class CreateItem extends Component {
 
   uploadFile = e => {
     console.log("uploading file");
+    const files = e.target.files;
+    const data = new FormData();
+    data.append("file", files[0]);
+    data.append("upload_presets", "sickfits");
   };
   render() {
     return (
