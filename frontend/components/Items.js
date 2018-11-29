@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Query } from "react-apollo";
 import gql from "graphql-tag";
+import styled from "styled-components";
 
 const ALL_ITEMS_QUERY = gql`
   query ALL_ITEMS_QUERY {
@@ -15,10 +16,20 @@ const ALL_ITEMS_QUERY = gql`
   }
 `;
 
+const Center = styled.div`
+  text-align: center;
+`;
+
+const ItemsList = styled.div`
+  display: grid;
+  grid-auto-columns: 1fr 1fr;
+  grid-gap: 60px;
+`;
+
 class Items extends Component {
   render() {
     return (
-      <div>
+      <Center>
         <p>Items!</p>
         <Query query={ALL_ITEMS_QUERY}>
           {({ data, error, loading }) => {
@@ -27,7 +38,7 @@ class Items extends Component {
             return <p>I found {data.items.length} items!</p>;
           }}
         </Query>
-      </div>
+      </Center>
     );
   }
 }
