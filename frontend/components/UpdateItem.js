@@ -60,20 +60,6 @@ class UpdateItem extends Component {
           >
             <Error error={error} />
             <fieldset disabled={loading} aria-busy={loading}>
-              <label htmlFor="file">
-                Image
-                <input
-                  type="file"
-                  id="file"
-                  name="file"
-                  placeholder="Upload an image"
-                  required
-                  onChange={this.uploadFile}
-                />
-                {this.state.image && (
-                  <img src={this.state.image} alt="Upload preview" />
-                )}
-              </label>
               <label htmlFor="title">
                 Title
                 <input
