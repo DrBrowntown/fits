@@ -6,6 +6,16 @@ import Form from "./styles/Form";
 import formatMoney from "../lib/formatMoney";
 import Error from "./ErrorMessage";
 
+const SINGLE_ITEM_QUERY = gql`
+  query SINGLE_ITEM_QUERY($id: ID!) {
+    item(where: { id: $id }) {
+      id
+      title
+      description
+      price
+    }
+  }
+`;
 const UPDATE_ITEM_MUTATION = gql`
   mutation UPDATE_ITEM_MUTATION(
     $title: String!
