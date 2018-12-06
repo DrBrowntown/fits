@@ -27,13 +27,7 @@ const UPDATE_ITEM_MUTATION = gql`
 `;
 
 class UpdateItem extends Component {
-  state = {
-    title: "wot hat",
-    description: "wot is this hat?",
-    image: "hat.png",
-    largeImage: "big-hat.png",
-    price: 1000
-  };
+  state = {};
   handleChange = e => {
     const { name, type, value } = e.target;
     const val = type === "number" ? parseFloat(value) : value;
