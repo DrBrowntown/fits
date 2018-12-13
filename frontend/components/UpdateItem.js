@@ -57,7 +57,6 @@ class UpdateItem extends Component {
             <Mutation mutation={UPDATE_ITEM_MUTATION} variables={this.state}>
               {(createItem, { loading, error }) => (
                 <Form
-                  on
                   onSubmit={async e => {
                     // stop form from submitting
                     e.preventDefault();
@@ -81,7 +80,7 @@ class UpdateItem extends Component {
                         name="title"
                         placeholder="Title"
                         required
-                        value={this.state.title}
+                        defaultValue={this.state.title}
                         onChange={this.handleChange}
                       />
                     </label>
@@ -93,7 +92,7 @@ class UpdateItem extends Component {
                         name="price"
                         placeholder="Price"
                         required
-                        value={this.state.price}
+                        defaultValue={this.state.price}
                         onChange={this.handleChange}
                       />
                     </label>
@@ -104,7 +103,7 @@ class UpdateItem extends Component {
                         name="description"
                         placeholder="Enter a description"
                         required
-                        value={this.state.description}
+                        defaultValue={this.state.description}
                         onChange={this.handleChange}
                       />
                     </label>
